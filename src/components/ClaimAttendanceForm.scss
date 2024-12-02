@@ -1,0 +1,86 @@
+// ClaimAttendanceForm.scss
+
+.claim-attendance-form {
+  background: rgb(5, 42, 99); /* Transparent black for dark mode */
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 95%;
+  max-width: 45rem; /* Limit the width */
+  margin: 0 auto;
+  animation: slideIn 1s ease-out;
+  
+  /* Make the form responsive */
+  @media (max-width: 768px) {
+    max-width: 90%; /* Reduce max-width on smaller screens */
+    padding: 1.5rem; /* Adjust padding */
+  }
+
+  h2 {
+    color: #63b3ed; /* Light blue */
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  label {
+    color: #bbdefb; /* Light blue */
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    display: block;
+    font-weight: bold;
+  }
+
+  input,
+  button {
+    background-color: #2a5298; /* Blue background */
+    border: 1px solid #63b3ed; /* Blue border */
+    color: white;
+    padding: 1rem;
+    font-size: 1.125rem;
+    border-radius: 0.5rem;
+    width: 90%;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+  }
+
+  input:focus {
+    border-color: #4299e1; /* Focused border color */
+    outline: none;
+  }
+
+  button {
+    background-color: #63b3ed; /* Light blue button */
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #4299e1; /* Darker blue on hover */
+      transform: translateY(-2px);
+    }
+  }
+
+  .form-footer {
+    text-align: center;
+    margin-top: 1.5rem;
+
+    p {
+      color: #bbdefb; /* Light blue */
+      font-size: 1rem;
+    }
+  }
+}
+
+// Keyframe animations for minimal animation effects
+@keyframes slideIn {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
